@@ -8,19 +8,45 @@ This repository is for MTDS5223 Manufacturing Analytics Capstone Project titled 
 
 
 ### Problem Background
+Semiconductor manufacturing process are consisting a lot of process which starting from front-end process to generate the skeleton wafer from raw material and then proceed with Back-end process to assemble the skeleton wafer with leadframe material, wire material and resin material into finshed good chip unit. Up on this stage, the finished good chip unit will be undergoing electrical testing to screen out all those production defect and allow only electical good unit deliver to customer. 
+
 Overall Equipment Effectiveness (OEE) is a kind of standard that to measure manufacturing productivity performance. OEE measurement can be help in underlying the losses and gain important insight on improve the current manufacturing process. OEE is measuring by 3 main factors which are availability (equipment planned & unplanned stop), performance (any slow cycle or small stoppage) and quality (yield).
 
-#### Ishikawa Diagram
-#### Problem Selection
+![image](https://user-images.githubusercontent.com/124271337/216338957-c6966eba-ff62-4261-9fcd-a9c2e3871f23.png)
+Figure 1: OEE Equipment States by De Ron, A. J., & Rooda, J. E. (2005)
 
+#### OEE Performance Based on Molding Machine
+The dataset was extracted from actual molding machine for period of January 2022 until December 2022. The OEE data have been plotted in Figure 2. The trends was showed the OEE was above 80% through out the period while machine downtime contributed to 10%-18% each month.
+
+![image](https://user-images.githubusercontent.com/124271337/216339221-c184a50b-f775-4b4f-962d-79d1b3caf10c.png)
+Figure 2: OEE 12 Months Trend for Molding Machine
+
+
+#### Ishikawa Diagram
+![image](https://user-images.githubusercontent.com/124271337/216339884-8d2cdcf6-d17d-4524-887c-c79375d1e558.png)
+
+#### Problem selection list
+Based on 5M analysis, there are 2 problems identify as contribute to main OEE deterioriation issue.
+
+![image](https://user-images.githubusercontent.com/124271337/216340011-c8e2ea0f-3c75-4a6c-bed5-d3a2d650ea03.png)
+
+#### Problem selection matrix
+Based on risk ranking, too many stoppage under machine was identified as main issue to be address.
+
+![image](https://user-images.githubusercontent.com/124271337/216340349-a9dd366a-5946-42a5-baab-c9df47462ade.png)
 
 ### Problem Statement
-Equipment in manufacturing can contributes to the OEE factors (available, performance, quality) if not well maintained. Equipment without being repaired before it fails, can directly or indirectly causing further damage to the equipment and connected systems. In order to secure quality and cost saving, it is crucial to reduce any unscheduled machine breakdown. Preventive maintenance was most common technique that implemented in manufacturing sector these year. However, with preventive maintenance, the limitation was only periodic scheduling to perform health check and service to machine. In proactive manner, predictive maintenance can use to predict the failure, and before machine part breakdown, it take to precaution to repair or change part to reduce sudden failure during production running which causing un-scheduled downtime. Most of predictive maintenance today align with the implementation of Industry 4.0 is using edge platform attached to the machine by using sensor data as input that detect signal abnormality and critical threshold but there are still many legacy machines that not ready to be modernized with such capability.
+Equipment in manufacturing can contributes to the OEE factors (available, performance, quality) if not well maintained. Equipment without being repaired before it fails, can directly or indirectly causing further damage to the equipment and connected systems. In order to secure quality and cost saving, it is crucial to reduce any unscheduled machine breakdown. Preventive maintenance was most common technique that implemented in manufacturing sector these year. However, with preventive maintenance, the limitation was only periodic scheduling to perform health check and service to machine. 
 
+However, some machine component was not able to remain in good condition before reaching next preventive maintenance schedule. Breakdown maintenance activity are needed and create the additional downtime on the test handler and impact machine output since it is unplanned event. Semiconductor equipment are very expensive, and it is crucial to continue use them and avoid breakdown. Even with preventive maintenance schedule, some failure still possible to happen and generate machine stoppage due to complicated failure with unpredictable nature
+
+In proactive manner, predictive maintenance can use to predict the failure, and before machine part breakdown, it take to precaution to repair or change part to reduce sudden failure during production running which causing un-scheduled downtime. Most of predictive maintenance today align with the implementation of Industry 4.0 is using edge platform attached to the machine by using sensor data as input that detect signal abnormality and critical threshold but there are still many legacy machines that not ready to be modernized with such capability.
 
 ### Objective
-Our objective in this project is to predict event which can cause unscheduled downtime for the running equipment.
-
+Our objective in this project are as per below:
+a. To predict event which may cause unscheduled downtime in equipment
+b. To develop a proof-of-concept (POC) prediction model based on machine alarm and status data
+c. To evaluate model performance
 
 ### Predictive maintenance
 Predictive maintenance is a proactive approach to maintenance that uses data, analytics and machine learning algorithms to predict when equipment is likely to fail and schedule maintenance accordingly.
@@ -31,8 +57,8 @@ Predictive maintenance and preventive maintenance are two types of maintenance s
 ##### Proactive vs. Reactive: Preventive maintenance is a proactive approach to maintenance, as maintenance activities are performed before failures occur. Predictive maintenance is a reactive approach, as maintenance is performed only when a failure is predicted.
 ##### Cost: Preventive maintenance can be more expensive as maintenance activities are performed regularly, regardless of the actual condition of the equipment. Predictive maintenance can be more cost-effective, as maintenance activities are performed only when necessary, reducing the overall maintenance cost.
 ##### Equipment Downtime: Preventive maintenance can result in unplanned downtime, as maintenance activities may be performed even when equipment is functioning properly. Predictive maintenance can reduce unplanned downtime, as maintenance is performed only when a failure is predicted.
-! flow diagram here !
 
+![image](https://user-images.githubusercontent.com/124271337/216340932-cd3ad209-cdfb-4c57-a1d8-5a2e0a01c8eb.png)
 
 ### References
 ! put reference here !
